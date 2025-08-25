@@ -1,5 +1,6 @@
 const dimensions: number[] = [1920, 1080];
 
+console.log(4, dimensions);
 
 // Задача 4
 

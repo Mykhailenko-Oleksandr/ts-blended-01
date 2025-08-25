@@ -1,36 +1,35 @@
 interface Container<T> {
-    items: T[]; 
-    addItem(element: T): void;
-getItem(index: number): T;
+  items: T[];
+  addItem(element: T): void;
+  getItem(index: number): T;
 }
 
 const numberContainer: Container<number> = {
-    items: [1, 2, 3, 4],
-    addItem (element)  {
-        this.items.push(element);
-    },
-    getItem (index) {
-        return this.items[index];
-    }
-}
+  items: [1, 2, 3, 4],
+  addItem(element) {
+    this.items.push(element);
+  },
+  getItem(index) {
+    return this.items[index];
+  },
+};
 
 const stringContainer: Container<string> = {
-    items: ['a', 'b', 'c', 'd'],
-    addItem (element)  {
-        this.items.push(element);
-    },
-    getItem (index) {
-        return this.items[index];
-    }
-}
+  items: ["a", "b", "c", "d"],
+  addItem(element) {
+    this.items.push(element);
+  },
+  getItem(index) {
+    return this.items[index];
+  },
+};
 
 // numberContainer.addItem(7)
 console.log(numberContainer.getItem(2));
 
-function getLastElement(arr: Container[keyof]) {
-    return arr[arr.length - 1];
-}
-
+// function getLastElement(arr: Container[keyof]) {
+//     return arr[arr.length - 1];
+// }
 
 // Завдання:
 

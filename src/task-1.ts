@@ -2,7 +2,7 @@ type Settings = {
   darkMode: boolean;
   fontSize: number;
   language: string;
-}
+};
 
 const settings: Settings = {
   darkMode: true,
@@ -10,6 +10,7 @@ const settings: Settings = {
   language: "en",
 };
 
+console.log(1, settings);
 
 // Задача 1
 

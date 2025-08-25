@@ -4,11 +4,10 @@ interface Currency {
 }
 
 function convertCurrency({ amount, currency }: Currency): void {
-  console.log(`Converting ${amount} to ${currency}`);
+  console.log(2, `Converting ${amount} to ${currency}`);
 }
 
-convertCurrency({amount: 10, currency: 'UAH'} ) 
-
+convertCurrency({ amount: 10, currency: "UAH" });
 
 // Задача 2
 
