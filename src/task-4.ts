@@ -1,4 +1,4 @@
-const dimensions = [1920, 1080];
+const dimensions: number[] = [1920, 1080];
 
 
 // Задача 4

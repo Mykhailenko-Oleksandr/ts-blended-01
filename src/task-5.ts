@@ -1,4 +1,9 @@
-function createUser({name, age}) {
+interface User {
+  name: string;
+  age: number;
+}
+
+function createUser({ name, age }: User): User & {isAdmin: boolean} {
     return {
       name,
       age,
