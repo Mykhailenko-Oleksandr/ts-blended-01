@@ -1,14 +1,43 @@
-
 import axios from "axios";
 
+interface Post {
+  body: string;
+  id: number;
+  title: string;
+  userId: number;
+}
+
 const fetchPosts = async () => {
-  const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+  const response = await axios.get<Post[]>(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+
   return response.data;
 };
 
+interface ThreePost {
+  title: string;
+  body: string;
+}
+
+async function logThreePosts() {
+  const posts = await fetchPosts();
+  const threePost = [];
+  for (let i = 0; i < 3; i++) {
+    threePost.push(posts[i]);
+  }
+  const threePostUpdate = threePost.map((post): ThreePost => {
+    return {
+      title: post.title,
+      body: post.body,
+    };
+  });
+  console.log(20, threePostUpdate);
+}
+
+logThreePosts();
 
 // Функція fetchPosts повинна отримати список постів з API за допомогою бібліотеки axios.
-
 
 // Завдання:
 

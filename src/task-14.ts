@@ -1,13 +1,10 @@
-
-
 function fetchMessage() {
-  return new Promise((resolve) => {
+  return new Promise<string>((resolve) => {
     resolve("Hello from server!");
   });
 }
 
-fetchMessage().then(message => console.log(message));
-
+fetchMessage().then((message) => console.log(14, message));
 
 // Функція fetchMessage повертає проміс, який повертає рядок.
 

@@ -1,6 +1,21 @@
 const users = ["alice", "bob", "charlie"];
 
+interface User {
+    id: number;
+    name: string;
+}
 
+function toUserObjects(arr: string[]): User[] {
+    const objUsers = arr.map((userName, index) => {
+      return  {
+          id: index + 1,
+          name: userName
+        }
+    })
+    return objUsers;
+}
+
+console.log(10, toUserObjects(users));
 
 // Завдання:
 
@@ -13,9 +28,3 @@ const users = ["alice", "bob", "charlie"];
 // 3. Функція повинна повертати масив отриманих об’єктів.
 
 // 4. Переконайтеся, що результат функції має правильну типізацію, а TypeScript не видає помилок.
-
-// Приклад виклику:
-
-// toUserObjects(users);
-// Повертає: [{ id: 1, name: "alice" }, { id: 2, name: "bob" }, { id: 3, name: "charlie" }]
-

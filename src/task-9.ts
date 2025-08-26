@@ -25,11 +25,14 @@ const stringContainer: Container<string> = {
 };
 
 // numberContainer.addItem(7)
-console.log(numberContainer.getItem(2));
+// console.log(numberContainer.getItem(2));
 
-// function getLastElement(arr: Container[keyof]) {
+// function getLastElement(arr: Container<T>["items"]): T {
 //     return arr[arr.length - 1];
 // }
+
+// console.log(getLastElement([1, 3]));
+
 
 // Завдання:
 

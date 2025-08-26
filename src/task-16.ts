@@ -1,14 +1,18 @@
+interface Profile {
+  username: string;
+  age: number;
+  isAdmin: boolean;
+}
 
 function fetchProfile() {
-  return new Promise((resolve) => {
+  return new Promise<Profile>((resolve) => {
     setTimeout(() => {
       resolve({ username: "max_123", age: 28, isAdmin: true });
     }, 1000);
   });
 }
 
-fetchProfile().then(profile => console.log(profile));
-
+fetchProfile().then((profile) => console.log(16, profile));
 
 // Функція fetchProfile повертає проміс, який через затримку повертає профіль користувача.
 
