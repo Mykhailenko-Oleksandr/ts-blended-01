@@ -24,15 +24,12 @@ const stringContainer: Container<string> = {
   },
 };
 
-// numberContainer.addItem(7)
-// console.log(numberContainer.getItem(2));
+function getLastElement<T>(arr: T[]): T {
+  return arr[arr.length - 1];
+}
 
-// function getLastElement(arr: Container<T>["items"]): T {
-//     return arr[arr.length - 1];
-// }
-
-// console.log(getLastElement([1, 3]));
-
+console.log(9, getLastElement(stringContainer.items));
+console.log(9, getLastElement(numberContainer.items));
 
 // Завдання:
 
